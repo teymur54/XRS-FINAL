@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply flex items-center justify-center rounded-md bg-black text-white transition-all duration-200 enabled:hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-red {
+    @apply flex items-center justify-center rounded-md border-2 border-oceanblue bg-red-950 text-white transition-all duration-200 enabled:hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .nav-element {
+    @apply mt-2 flex h-10 w-full items-center gap-2 rounded-md border-2 border-oceanblue bg-white pl-1 text-sm text-black transition-all duration-200 hover:brightness-125;
+  }
+
+  .active-nav-element {
+    @apply mt-2 flex h-10 w-full items-center gap-2 rounded-md border-2 border-oceanblue bg-red-950 pl-1 text-sm font-bold text-white brightness-125 transition-all duration-200;
+  }
+
+  .input-style {
+    @apply mt-0.5 h-[40px] w-full rounded-[30px] border-2 border-oceanblue px-2 py-0 text-lg duration-200 focus:outline-none active:border-white;
+  }
+
+  .tooltip {
+    @apply pointer-events-none absolute top-5 m-2 w-auto min-w-max origin-top scale-0 rounded-md bg-darkblue-400 p-2 text-sm text-white shadow-md transition-all duration-150;
+  }
+}
+
+/* w-auto min-w-max */
